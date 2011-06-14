@@ -10,7 +10,10 @@ class Rabbitmq < Formula
 
   def patches
     # Can't build manpages without a lot of other junk, so disable
-    DATA
+    [
+      DATA,
+      "https://github.com/ooici/rabbitmq-server/commit/9db1d2fd423d279da0a700966745ae05eccb93b3.patch"
+    ]
   end
 
   def install
